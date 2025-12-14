@@ -28,7 +28,7 @@ Další roky, ve kterých byl zaznamenán pokles průměrné mzdy (příklady ne
 
 Porovnáváme kupní sílu v letech 2006 a 2018 a to skrze všechna sledovaná odvětví. Ve většině odvětví došlo k celkovému nárůstu kupní síly, také rozdíl mezi nejlépe a nejhůře placenými odvětvími se mírně snižuje. V případě chleba došlo však dokonce k poklesu kupní síly u nejbohatších odvětví.
 
-a. Mléko
+**a. Mléko**
 
 Kupní síla ve vztahu k mléku se celkově zvýšila. Průměrná mzda napříč celou ekonomikou (2006 vs. 2018) umožnila zakoupit o 204,33 litrů mléka více. Rozdíl mezi nejlépe a nejhůře placenými odvětvími se ve sledovaném období mírně snížil.
 
@@ -40,7 +40,7 @@ Kupní síla ve vztahu k mléku se celkově zvýšila. Průměrná mzda napří�
 
 Ačkoli nejhůře placené odvětví (Ubytování, stravování, pohostinství) zaznamenalo procentuálně velmi vysoký nárůst kupní síly (+20,1 %), v absolutních číslech si v roce 2018 stále mohlo za průměrnou mzdu koupit téměř třikrát méně mléka než nejlépe placené odvětví (Informační a komunikační činnosti).
 
-b. Chléb
+**b. Chléb** 
 
 Zatímco v průměru se kupní síla mírně zvýšila, u nejlépe placeného odvětví došlo ke skutečnému poklesu reálné kupní síly.
 
@@ -54,7 +54,7 @@ Nejlépe placené odvětví (Informační a komunikační činnosti) tedy zaznam
 
 ### **3. Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?**
 
-Z analýzy růstu cen potravin vyplynulo, že některé položky, jako třeba Cukr a Rajská jablka, šly dokonce proti inflaci a v průměru za rok zlevnily. Růst cen u těchto potravin byl tak nejpomalejší a nejstabilnější z celého sledovaného koše.
+Z analýzy růstu cen potravin vyplynulo, že některé položky, jako třeba Cukr a Rajská jablka, šly dokonce proti inflaci a v průměru za rok zlevnily. Růst cen u těchto potravin byl tak nejpomalejší a nejstabilnější ze všech sledovaných kategorií.
 
 * **Přehled kategorií s nejnižším nárůstem cen**
 
@@ -76,7 +76,7 @@ Na opačném konci spektra se nachází kategorie, u kterých docházelo k nejry
 | Předposlední | Máslo | 6,68 % | 
 | Třetí od konce | Vejce slepičí čerstvá | 5,56 % | 
 
-Kategoriemi potravin s nejpomalejší cenovou dynamikou jsou tedy Cukr krystalový (-1,92 %) a Rajská jablka červená kulatá (-0,74 %). U těchto položek došlo v průměru za sledované období k reálné deflaci (snížení průměrné ceny). Naopak, nejrychlejší cenový růst zaznamenaly Papriky s průměrným ročním nárůstem 7,29 %.
+Kategoriemi potravin s nejpomalejším růstem ceny jsou tedy Cukr krystalový (-1,92 %) a Rajská jablka červená kulatá (-0,74 %). U těchto položek došlo v průměru za sledované období dokonce ke snížení průměrné ceny. Naopak, nejrychlejší cenový růst zaznamenaly Papriky s průměrným ročním nárůstem 7,29 %.
 
 ### **4. Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?**
 
@@ -88,7 +88,10 @@ Největší rozdíl ve prospěch růstu cen potravin byl zaznamenán v roce 2013
 | 2012 | 6,73 | 3,03 | 3,70 p.b. | 
 | 2017 | 9,63 | 6,28 | 3,35 p.b. | 
 
-Přestože nebyla překročena hranice 10 p.b., rok 2013 je z hlediska reálné kupní síly nejdramatičtější:Růst cen potravin byl v tomto roce pozitivní (5,10 %).Průměrná mzda celkově klesla (-1,56 %).Tato kombinace (růst cen + pokles mezd) měla v roce 2013 největší negativní dopad na reálnou kupní sílu občanů ve sledovaném období.
+Přestože nebyla překročena hranice 10 p.b., rok 2013 je z hlediska reálné kupní síly nejdramatičtější:
+* Růst cen potravin byl v tomto roce pozitivní (5,10 %).
+* Průměrná mzda celkově klesla (-1,56 %).
+* Tato kombinace (růst cen + pokles mezd) měla v roce 2013 největší negativní dopad na reálnou kupní sílu občanů ve sledovaném období.
 
 ### **5. Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo následujícím roce výraznějším růstem?**
 
@@ -96,24 +99,25 @@ Na základě analyzovaných dat za období 2007–2018 nelze říci, že by vý�
 
 a. Vliv růstu HDP na Změny ve Mzdách
 
-Vztah mezi růstem HDP a růstem mezd je silný, ale typicky s ročním zpožděním (setrvačností).
+Vztah mezi růstem HDP a růstem mezd je silný, ale typicky s ročním zpožděním.
 | Rok silného růstu HDP	% | Změna HDP	% | Změna Mzdy v následujícím roce | Pozorování | 
 | :--- | :--- | :--- | :--- |
 | 2007 | 5.57 % | 7.87 % (v roce 2008) | Vysoký růst HDP v roce 2007 vedl k vysokému růstu mezd v roce 2008, i když HDP již zpomalilo. | 
 | 2017 | 5.17 % | 7.62 % (v roce 2018)| Podobně, silný růst HDP v roce 2017 vedl k akceleraci růstu mezd v roce 2018, i když HDP již zpomalovalo. | 
 
-Pokud HDP vzroste výrazněji v jednom roce (např. > 5 %$ v letech 2007, 2015, 2017), projeví se to na mzdách spíše v následujícím roce silnou akcelerací mzdového růstu. V daném roce je mzdový růst často spíše pokračováním trendu z předchozího období (viz rok 2008). Během poklesu HDP v roce 2009 (-4.66%) se mzdy držely a stále rostly (3.16%), což naznačuje, že mzdy reagují na krize pomaleji než HDP.
+Pokud HDP vzroste výrazněji v jednom roce (např. > 5 % v letech 2007, 2015, 2017), projeví se to na mzdách spíše v následujícím roce. V daném roce je mzdový růst často spíše pokračováním trendu z předchozího období (viz rok 2008). Během poklesu HDP v roce 2009 (-4.66 %) se mzdy držely a stále rostly (3.16 %), což naznačuje, že mzdy reagují na krize pomaleji než HDP.
 
 b. Vliv růstu HDP na Změny v Cenách Potravin
 
 Vztah mezi růstem HDP a růstem cen potravin je méně přímý a je významně narušen vnějšími vlivy a cenovými šoky.
-* V letech silné ekonomické konjunktury (např. 2007, kde HDP rostlo o 5.57% a ceny o 6.76%; a 2017, kde HDP rostlo o 5.17%0a ceny o 9.63%), se zdá, že silná poptávka tažená HDP dokáže výrazně zvednout i ceny.
-* 2009: HDP prudce kleslo, a ceny reagovaly deflací (-6.42%), což ukazuje na korelaci.
-* 2012–2013: HDP stagnovalo/klesalo (-0.79% a -0.05%), přesto ceny rostly velmi rychle (6.73% a 5.10%). Tento vztah je silně narušen, pravděpodobně vládními zásahy (např. zvýšení DPH).
-* 2015–2016: HDP rostlo velmi silně (až 5.39%), ale ceny potravin klesaly (deflace,-0.55% a -1.19%), což bylo dáno vnějšími vlivy (např. pokles cen komodit).
+* V letech silného ekonomického růstu (např. 2007, kde HDP rostlo o 5.57 % a ceny o 6.76 %; a 2017, kde HDP rostlo o 5.17 % a ceny o 9.63 %), se zdá, že silná poptávka tažená HDP dokáže výrazně zvednout i ceny.
+* 2009: HDP prudce kleslo, ceny reagovaly poklesem (-6.42 %)
+* 2012–2013: HDP stagnovalo/klesalo (-0.79 % a -0.05 %), přesto ceny rostly velmi rychle (6.73 % a 5.10 %). Tento vztah je silně narušen, pravděpodobně vládními zásahy (např. zvýšení DPH).
+* 2015–2016: HDP rostlo velmi silně (až 5.39 %), ale ceny potravin klesaly (-0.55 % a -1.19 %), což bylo patrně dáno vnějšími vlivy
 
 Má tedy výška HDP vliv na změny ve mzdách? Spíše ne přímo v daném roce. Výrazný růst HDP se spolehlivě projeví výrazným růstem mezd, ale obvykle až v následujícím roce. V daném roce jsou mzdy setrvačné.
-Má výška HDP vliv na změny v cenách potravin? Má, ale jen za ideálních podmínek. Vliv je silný v obdobích konjunktury (2007, 2017), ale často je potlačen nebo překonán vnějšími vlivy (DPH, levné/drahé komodity).
+
+Má výška HDP vliv na změny v cenách potravin? Má, ale jen za ideálních podmínek. Vliv je silný v obdobích růstu (2007, 2017), ale často je potlačen nebo překonán vnějšími vlivy (DPH, levné/drahé komodity).
 
 ## Závěr a Doporučení
 
@@ -124,4 +128,4 @@ Má výška HDP vliv na změny v cenách potravin? Má, ale jen za ideálních p
 * Největší cenovou stabilitu, vedoucí v průměru k deflaci, vykazovaly komodity jako Cukr krystalový (-1,92 %) a Rajská jablka červená kulatá (-0,74 %). Tyto položky působily jako stabilizátory spotřebního koše.
 * Naopak, největší cenovou volatilitu a riziko pro rozpočty domácností představují položky jako Papriky (+7,29 %) a Máslo (+6,68 %), jejichž průměrný roční nárůst byl násobně vyšší než celková inflace.
 
-Výsledky analýzy jasně indikují, že životní úroveň občanů je silně ovlivněna makroekonomickými šoky (např. v roce 2013) a cenovou dynamikou v segmentu základních potravin. Pro budoucí politická a ekonomická rozhodování je klíčové monitorovat zejména vývoj mezd v odvětvích s tradičně nízkou kupní silou (např. Ubytování, stravování a pohostinství), protože jakékoli výrazné inflační vlny v cenách potravin zasahují tyto skupiny nejtvrději.
+Výsledky analýzy jasně indikují, že životní úroveň občanů je silně ovlivněna ekonomickými vlivy (např. v roce 2013) a cenovou dynamikou v segmentu základních potravin. Pro budoucí politická a ekonomická rozhodování je klíčové monitorovat zejména vývoj mezd v odvětvích s tradičně nízkou kupní silou (např. Ubytování, stravování a pohostinství), protože jakékoli výrazné inflační vlny v cenách potravin zasahují tyto skupiny nejtvrději.
