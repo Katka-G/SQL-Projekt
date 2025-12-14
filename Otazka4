@@ -1,0 +1,42 @@
+WITH cte_annual_average AS ( 
+	SELECT	
+		kgp.payroll_year,
+		AVG(kgp.annual_average_price) AS average_prices,
+		AVG(kgp.annual_average_salary) AS average_salary
+	FROM t_katerina_gregorova_project_sql_primary_final AS kgp
+	GROUP BY
+		kgp.payroll_year
+),
+cte_lagged AS (
+	SELECT 
+		caa.payroll_year,
+		caa.average_prices,
+		LAG(caa.average_prices,1,NULL) OVER (
+			ORDER BY caa.payroll_year 
+		) AS previous_year_price,
+		caa.average_salary,
+		LAG(caa.average_salary,1,NULL) OVER (
+			ORDER BY caa.payroll_year 
+		) AS previous_year_salary
+	FROM cte_annual_average AS caa
+),
+cte_percentage_increase AS (
+	SELECT										
+		cl.payroll_year,
+		ROUND(
+			((cl.average_prices - previous_year_price) * 100) / NULLIF(previous_year_price,0), 2) AS percentage_increase_prices,
+		ROUND(
+			((cl.average_salary - previous_year_salary) * 100) / NULLIF(previous_year_salary,0), 2) AS percentage_increase_salaries
+	FROM cte_lagged AS cl
+	WHERE
+		cl.previous_year_price IS NOT NULL
+		AND cl.previous_year_salary IS NOT NULL
+)
+SELECT
+	cpi.payroll_year,
+	cpi.percentage_increase_prices,
+	cpi.percentage_increase_salaries,
+	(cpi.percentage_increase_prices - cpi.percentage_increase_salaries) AS difference
+FROM cte_percentage_increase AS cpi
+ORDER BY
+	difference DESC;
