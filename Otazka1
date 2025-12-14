@@ -1,0 +1,32 @@
+WITH cte_aggregated_salary AS (
+	SELECT	
+		kgp.payroll_year,
+		kgp.industry,
+		AVG(kgp.annual_average_salary) AS average_salary
+	FROM t_katerina_gregorova_project_sql_primary_final AS kgp
+	GROUP BY
+		kgp.payroll_year,
+		kgp.industry
+),
+cte_annual_increase AS (
+	SELECT 
+		cas.payroll_year,
+		cas.industry,
+		cas.average_salary,
+		LAG(cas.average_salary,1,NULL) OVER (
+			PARTITION BY cas.industry 
+			ORDER BY cas.payroll_year
+		) AS previous_year_salary
+	FROM cte_aggregated_salary AS cas
+)
+SELECT	
+	ai.payroll_year,
+	ai.industry,
+	ai.average_salary - previous_year_salary AS increase
+FROM cte_annual_increase AS ai
+WHERE 
+	ai.average_salary - previous_year_salary < 0
+ORDER BY
+	increase,  
+	ai.industry,
+	ai.payroll_year;
