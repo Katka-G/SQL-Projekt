@@ -1,0 +1,50 @@
+WITH cte_boundary_year AS (					
+	SELECT 
+		MIN(kgp.payroll_year) AS first_year,
+		MAX(kgp.payroll_year) AS last_year,
+		kgp.industry
+	FROM t_katerina_gregorova_project_sql_primary_final AS kgp
+	GROUP BY kgp.industry 
+),
+cte_economy_wide_average AS (
+	SELECT
+		kgp.payroll_year,
+		kgp.food_category,
+		'Průměr všech odvětví' AS industry, 		
+		ROUND(AVG(kgp.annual_average_salary) / AVG(kgp.annual_average_price)::NUMERIC, 2) AS purchasable_quantity
+	FROM t_katerina_gregorova_project_sql_primary_final AS kgp
+    WHERE 
+    	(kgp.food_category LIKE 'Mléko%' OR 
+    	kgp.food_category LIKE 'Chléb%')
+    GROUP BY 
+    kgp.payroll_year, 
+    kgp.food_category
+)
+SELECT 
+	kgp.payroll_year,
+	kgp.food_category,
+	kgp.industry,
+	ROUND((kgp.annual_average_salary / kgp.annual_average_price)::NUMERIC, 2) AS purchasable_quantity
+FROM t_katerina_gregorova_project_sql_primary_final AS kgp
+JOIN 
+	cte_boundary_year AS by
+	ON kgp.industry = by.industry
+WHERE (kgp.payroll_year = by.first_year
+	OR kgp.payroll_year = by.last_year)
+	AND (kgp.food_category LIKE 'Mléko%'
+	OR kgp.food_category LIKE 'Chléb%')
+UNION ALL
+SELECT
+	cea.payroll_year,
+	cea.food_category,
+	cea.industry,
+	cea.purchasable_quantity
+FROM cte_economy_wide_average AS cea
+WHERE 
+	cea.payroll_year = (SELECT MIN(payroll_year) FROM cte_economy_wide_average)
+  OR cea.payroll_year = (SELECT MAX(payroll_year) FROM cte_economy_wide_average)
+ORDER BY 
+	food_category DESC,
+  purchasable_quantity, 
+	industry,
+	payroll_year;
