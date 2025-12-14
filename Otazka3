@@ -1,0 +1,36 @@
+WITH cte_aggregated_prices AS (		
+	SELECT	
+		kgp.payroll_year,
+		kgp.food_category,
+		AVG(kgp.annual_average_price) AS average_prices
+	FROM t_katerina_gregorova_project_sql_primary_final AS kgp
+	GROUP BY
+		kgp.payroll_year,
+		kgp.food_category
+),
+cte_annual_increase AS (		
+	SELECT 
+		ap.payroll_year,
+		ap.food_category,
+		ap.average_prices,
+		LAG(ap.average_prices,1,NULL) OVER (
+			PARTITION BY ap.food_category 
+			ORDER BY ap.payroll_year
+		) AS previous_year_price
+	FROM cte_aggregated_prices AS ap
+),
+cte_percentage_increase AS (
+	SELECT								
+		ai.food_category,
+		ROUND(
+			((ai.average_prices  - previous_year_price) * 100) / NULLIF(previous_year_price,0), 2) AS percentage_increase
+	FROM cte_annual_increase AS ai
+)
+SELECT
+	cpi.food_category,				
+	ROUND(AVG(cpi.percentage_increase), 2) AS average_percentage_increase
+FROM cte_percentage_increase AS cpi
+GROUP BY
+	cpi.food_category 
+ORDER BY 
+	average_percentage_increase ASC;
