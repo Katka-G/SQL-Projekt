@@ -1,0 +1,55 @@
+WITH cte_annual_HDP AS ( 
+	SELECT	
+		kgps.year,
+		kgps.gdp AS HDP
+	FROM t_katerina_gregorova_project_sql_secondary_final AS kgps
+	WHERE
+		kgps.country = 'Czech Republic'
+),
+cte_annual_price_salary AS (
+	SELECT 
+		kgpp.payroll_year,
+		AVG(kgpp.annual_average_price) AS AveragePrice,
+		AVG(kgpp.annual_average_salary) AS AverageSalary
+	FROM t_katerina_gregorova_project_sql_primary_final AS kgpp
+	GROUP BY
+		kgpp.payroll_year 
+),
+cte_merged AS (
+	SELECT										
+		cah.year,
+		cah.hdp,
+		caps.averageprice,
+		caps.averagesalary 
+	FROM cte_annual_HDP AS cah
+	JOIN 
+		cte_annual_price_salary AS caps
+		ON cah.year = caps.payroll_year 
+),
+cte_lagged AS (
+	SELECT
+		cm.year,
+		cm.hdp,
+		cm.averageprice,
+		cm.averagesalary,
+		LAG(cm.hdp,1,NULL) OVER (
+			ORDER BY cm.year
+		) AS previous_year_HDP,
+		LAG(cm.averageprice,1,NULL) OVER (
+			ORDER BY cm.year 
+		) AS previous_year_price,
+		LAG(cm.averagesalary,1,NULL) OVER (
+			ORDER BY cm.year 
+		) AS previous_year_salary
+	FROM cte_merged AS cm
+)
+SELECT
+	cl.year, 
+	((cl.hdp - cl.previous_year_hdp) / cl.previous_year_hdp) * 100 AS percentage_change_HDP,
+	((cl.averageprice - cl.previous_year_price) / cl.previous_year_price) * 100 AS percentage_change_price,
+	((cl.averagesalary - cl.previous_year_salary) / cl.previous_year_salary) * 100  AS percentage_change_salary
+FROM cte_lagged AS cl
+WHERE
+	cl.previous_year_hdp IS NOT NULL
+ORDER BY
+	cl.year;
